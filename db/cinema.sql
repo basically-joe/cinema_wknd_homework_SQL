@@ -18,6 +18,5 @@ CREATE TABLE films (
 CREATE TABLE tickets (
   id SERIAL8 PRIMARY KEY,
   customer_id INT4 REFERENCES customers(id) ON DELETE CASCADE,
-  film_id INT4 REFERENCES films(id) ON DELETE CASCADE,
-  price INT4
+  film_id INT4 REFERENCES films(id) ON DELETE CASCADE
 );
