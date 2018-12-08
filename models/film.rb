@@ -20,12 +20,12 @@ class Film
     @id = film['id'].to_i
   end
 
-  # def self.all()
-  #   sql = "SELECT * from films"
-  #   film_data = SqlRunner.run(sql)
-  #   return film_data.map{ |film| Customer.new(film)}
-  # end
-  #
+  def self.all()
+    sql = "SELECT * from films"
+    film_data = SqlRunner.run(sql)
+    return film_data.map{ |film| Customer.new(film)}
+  end
+
   # def update()
   #   sql = "UPDATE films SET (title, price) = ($1, $2)
   #   WHERE id = $3"
