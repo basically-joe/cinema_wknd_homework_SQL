@@ -46,5 +46,25 @@ customer5.save
 
 # customer1.delete()
 
+film1 = Film.new({
+  'title' => 'Avengers 4: End Game',
+  'price' => 10
+  })
+
+film1.save
+
+film2 = Film.new({
+  'title' => 'Fantastic Beasts 2: The crimes of Grindelwald',
+  'price' => 10
+    })
+
+film2.save
+
+film3 = Film.new({
+  'title' => 'Creed II',
+  'price' => 15
+        })
+film3.save
+
 binding.pry
 nil
