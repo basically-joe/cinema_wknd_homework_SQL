@@ -69,5 +69,7 @@ film3.save
 film3.title = "Spiderman"
 film3.update
 
+film3.delete()
+
 binding.pry
 nil
