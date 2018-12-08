@@ -37,10 +37,12 @@ customer5 = Customer.new({
   'funds' => 200
   })
 
+customer5.save
+
 customer5.name = 'Jock'
 customer5.update
 
-customer5.save
+customer1.delete()
 
 binding.pry
 nil
