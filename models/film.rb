@@ -26,13 +26,13 @@ class Film
     return film_data.map{ |film| Customer.new(film)}
   end
 
-  # def update()
-  #   sql = "UPDATE films SET (title, price) = ($1, $2)
-  #   WHERE id = $3"
-  #   values = [@title, @price, @id]
-  #   SqlRunner.run(sql, values)
-  # end
-  #
+  def update()
+    sql = "UPDATE films SET (title, price) = ($1, $2)
+    WHERE id = $3"
+    values = [@title, @price, @id]
+    SqlRunner.run(sql, values)
+  end
+
   # def delete()
   #   sql = "DELETE FROM films where id = $1"
   #   values = [@id]

@@ -66,5 +66,8 @@ film3 = Film.new({
         })
 film3.save
 
+film3.title = "Spiderman"
+film3.update
+
 binding.pry
 nil
