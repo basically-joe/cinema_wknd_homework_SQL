@@ -84,8 +84,10 @@ ticket3.save
 ticket4.save
 ticket5.save
 
-ticket1.customer_id = 333333333
-ticket1.update
+# ticket1.customer_id = 333333333
+# ticket1.update
+
+ticket1.delete()
 
 binding.pry
 nil
