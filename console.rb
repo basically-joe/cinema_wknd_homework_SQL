@@ -5,6 +5,7 @@ require_relative("models/tickets")
 require('pry')
 
 Customer.delete_all()
+Film.delete_all()
 
 customer1 = Customer.new({
   'name' => 'Jodie Tennant',
@@ -66,10 +67,10 @@ film3 = Film.new({
         })
 film3.save
 
-film3.title = "Spiderman"
-film3.update
-
-film3.delete()
+# film3.title = "Spiderman"
+# film3.update
+#
+# film3.delete()
 
 binding.pry
 nil
