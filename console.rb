@@ -4,6 +4,8 @@ require_relative("models/tickets")
 
 require('pry')
 
+Customer.delete_all()
+
 customer1 = Customer.new({
   'name' => 'Jodie Tennant',
   'funds' => 100
@@ -39,10 +41,10 @@ customer5 = Customer.new({
 
 customer5.save
 
-customer5.name = 'Jock'
-customer5.update
+# customer5.name = 'Jock'
+# customer5.update
 
-customer1.delete()
+# customer1.delete()
 
 binding.pry
 nil

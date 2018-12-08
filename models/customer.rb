@@ -39,7 +39,7 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
-  def delete_all()
+  def self.delete_all()
     sql = "DELETE FROM customers"
     SqlRunner.run(sql)
   end
