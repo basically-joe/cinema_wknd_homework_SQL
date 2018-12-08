@@ -4,6 +4,7 @@ require_relative("models/ticket")
 
 require('pry')
 
+Ticket.delete_all()
 Customer.delete_all()
 Film.delete_all()
 
@@ -87,7 +88,7 @@ ticket5.save
 # ticket1.customer_id = 333333333
 # ticket1.update
 
-ticket1.delete()
+# ticket1.delete()
 
 binding.pry
 nil
