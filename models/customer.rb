@@ -12,7 +12,7 @@ class Customer
   end
 
   def save()
-    sql = "INSERT into customer (name, funds)
+    sql = "INSERT INTO customers (name, funds)
     VALUES ($1, $2)
     RETURNING id"
     values = [@name, @funds]
