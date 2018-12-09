@@ -1,4 +1,6 @@
 require_relative("../db/sql_runner")
+require_relative("ticket")
+
 
 class Customer
 
@@ -56,6 +58,15 @@ class Customer
 
   def how_many_tickets_bought_by_customer()
     return films.count
+  end
+
+  def price()
+    sql = "SELECT films.price FROM
+    films INNER JOIN tickets
+    ON films.id = tickets.film_id
+    WHERE customer_id = $1"
+    values = [@customer_id]
+    SqlRunner.run(sql, values)
   end
 
 end

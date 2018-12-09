@@ -90,5 +90,11 @@ ticket5.save
 
 # ticket1.delete()
 
+# customer1.ticket_payment(ticket1)
+# customer2.ticket_payment(ticket2)
+# customer3.ticket_payment(ticket3)
+# customer3.ticket_payment(ticket4)
+# customer4.ticket_payment(ticket5)
+
 binding.pry
 nil

@@ -44,14 +44,14 @@ class Ticket
     SqlRunner.run(sql)
   end
 
-  def customer
+  def customer()
     sql = "SELECT * FROM customers WHERE customers.id = $1"
     values = [@customer_id]
     customer_data = SqlRunner.run(sql, values)
     return customer_data.map{ |customer| Customer.new(customer) }
   end
 
-  def film
+  def film()
     sql = "SELECT * FROM films WHERE films.id = $1"
     values = [@film_id]
     film_data = SqlRunner.run(sql, values)
