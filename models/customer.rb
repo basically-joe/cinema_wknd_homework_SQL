@@ -54,4 +54,8 @@ class Customer
     return film_data.map{ |film| Film.new(film) }
   end
 
+  def how_many_tickets_bought_by_customer()
+    return films.count
+  end
+
 end
