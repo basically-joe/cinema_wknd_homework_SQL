@@ -44,4 +44,11 @@ class Ticket
     SqlRunner.run(sql)
   end
 
+  def customer
+    sql = "SELECT * FROM customers WHERE customers.id = $1"
+    values = [@customer_id]
+    customer_data = SqlRunner.run(sql, values)
+    return customer_data.map{ |customer| Customer.new(customer) }
+  end
+
 end
