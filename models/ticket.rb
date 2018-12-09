@@ -51,4 +51,11 @@ class Ticket
     return customer_data.map{ |customer| Customer.new(customer) }
   end
 
+  def film
+    sql = "SELECT * FROM films WHERE films.id = $1"
+    values = [@film_id]
+    film_data = SqlRunner.run(sql, values)
+    return film_data.map{ |film| Film.new(film) }
+  end
+
 end
